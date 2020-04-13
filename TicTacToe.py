@@ -85,7 +85,6 @@ def CheckTie():
             Board[3] != '-' and Board[4] != '-' and Board[5] != '-' and
             Board[6] != '-' and Board[7] != '-' and Board[8] != '-'
     ):
-        DisplayBoard()
         print("Tie Game")
         quit()
 
