@@ -38,7 +38,7 @@ def UserInput():
     if replace not in position:
         print("Position taken, Enter any other number!")
     else:
-        Board[replace - 1] = (Turn)
+        Board[replace - 1] = Turn
         position.remove(replace)
         if Turn == 'X':
             Turn = 'O'
