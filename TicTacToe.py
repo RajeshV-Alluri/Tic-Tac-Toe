@@ -44,39 +44,41 @@ def UserInput():
             Turn = 'O'
         else:
             Turn = 'X'
-    return Turn
 
 ''' Function to check Win condition '''
 def CheckWin():
 
-    #Checking Rows
     if (
-            Board[0] == Board[1] == Board[2] == ('X' or 'O')
-            or Board[3] == Board[4] == Board[5] == ('X' or 'O')
-            or Board[6] == Board[7] == Board[8] == ('X' or 'O')
+            # Checking Rows
+            Board[0] == Board[1] == Board[2] == 'X'
+            or Board[3] == Board[4] == Board[5] == 'X'
+            or Board[6] == Board[7] == Board[8] == 'X'
+            # Checking Columns
+            or Board[0] == Board[3] == Board[6] == 'X'
+            or Board[1] == Board[4] == Board[7] == 'X'
+            or Board[2] == Board[5] == Board[8] == 'X'
+            # Checking Diagonals
+            or Board[0] == Board[4] == Board[8] == 'X'
+            or Board[2] == Board[4] == Board[6] == 'X'
     ):
         print ("Player 'X' Won")
         quit()
 
-    #Checking Columns
     elif (
-            Board[0] == Board[3] == Board[6] == ('X' or 'O')
-            or Board[1] == Board[4] == Board[7] == ('X' or 'O')
-            or Board[2] == Board[5] == Board[8] == ('X' or 'O')
+            # Checking Rows
+            Board[0] == Board[1] == Board[2] == 'O'
+            or Board[3] == Board[4] == Board[5] == 'O'
+            or Board[6] == Board[7] == Board[8] == 'O'
+            # Checking Columns
+            or Board[0] == Board[3] == Board[6] == 'O'
+            or Board[1] == Board[4] == Board[7] == 'O'
+            or Board[2] == Board[5] == Board[8] == 'O'
+            # Checking Diagonals
+            or Board[0] == Board[4] == Board[8] == 'O'
+            or Board[2] == Board[4] == Board[6] == 'O'
     ):
-        print ("Player 'X' Won")
+        print ("Player 'O' Won")
         quit()
-
-    #Checking Diagonals
-    elif (
-            Board[0] == Board[4] == Board[8] == ('X' or 'O')
-            or Board[2] == Board[4] == Board[6] == ('X' or 'O')
-    ):
-        print ("Player 'X' Won")
-        quit()
-
-    else:
-        pass
 
 ''' Function to check Tie condition '''
 def CheckTie():
