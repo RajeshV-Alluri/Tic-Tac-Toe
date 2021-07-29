@@ -24,8 +24,6 @@ def TakeInput():
     while(True):
         try:
             choice = int(input("Enter the number:"))
-            if choice < 1 or choice > 9:
-                print("Enter numbers between 0-9 only")
             break
         except:
             print("Enter valid input")
@@ -35,6 +33,8 @@ def TakeInput():
 def UserInput():
     global Turn
     replace = TakeInput()
+    if choice < 1 or choice > 9:
+        print("Enter numbers between 0-9 only")
     if replace not in position:
         print("Position taken, Enter any other number!")
     else:
